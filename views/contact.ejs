@@ -1,0 +1,114 @@
+<%- include("partials/contact-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:700|Fjalla+One&display=swap" rel="stylesheet">
+
+  <style media="all">
+    .top-container {
+      background-color: #000000;
+      /* This sets background colour for navbar('about-header.ejs') */
+    }
+
+    .navbar {
+      background-color: #000000;
+    }
+
+    .contact-page {
+      width: 100vw;
+      background-color: #7E0FC5;
+    }
+
+    .form-container {
+      width: 85%;
+      margin: auto;
+      padding: 100px 0 150px 0;
+      /* background-color: #FF0000; */
+    }
+
+    .header-container {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 80px;
+      /* background-color: grey; */
+    }
+
+    .text-1 {
+      font-family: 'Fjalla One', sans-serif;
+      font-weight: 800;
+      font-size: 2.8rem;
+      color: #000000;
+    }
+
+    .form-background {
+      background-color: #FFFFFF;
+    }
+
+    .text-colour {
+      color: #000000;
+    }
+
+    .button-colour {
+      color: #FFFFFF;
+      background-color: #292121;
+    }
+
+    .button-colour:hover {
+      color: #FFFF00;
+    }
+
+    .bottom-container {
+      background-color: #000000;   /* This sets background colour for footer('footer.ejs') */
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="contact-page">
+    <div class="container-fluid">
+      <div class="form-container">
+        <div class="header-container">
+          <h3 class="text-1">Want to get in touch or shoot me a message? Just fill out the form below with your details:</h3>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-8">
+              <div class="card form-background">
+                <div class="card-body">
+                  <form action="/contact" method="post">
+                    <div class="form-group">
+                      <label for="clientName"><span class="text-colour font-weight-bold">Your Name:</span></label>
+                      <input type="text" name="name" class="form-control" id="clientName" aria-describedby="privacy1" placeholder="eg. Paul Smith">
+                      <small id="privacy1" class="form-text text-colour">Your name will <span class="font-italic font-weight-bold">never</span> be shared with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="clientEmail"><span class="text-colour font-weight-bold">Your Email:</span></label>
+                      <input type="email" name="email" class="form-control" id="clientEmail" aria-describedby="privacy2" placeholder="eg. tommy@email.com">
+                      <small id="privacy2" class="form-text text-colour">Your email will <span class="font-italic font-weight-bold">never</span> be shared with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="clientMessage"><span class="text-colour font-weight-bold">Your Message:</span></label>
+                      <textarea id="clientMessage" name="message" class="form-control" rows="15" autofocus></textarea>
+                    </div>
+                    <button type="submit" class="btn button-colour">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

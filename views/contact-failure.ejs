@@ -1,0 +1,101 @@
+<%- include("partials/contact-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:700|Fjalla+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:500&display=swap" rel="stylesheet">
+
+  <style media="all">
+    .top-container {
+      background-color: #000000;
+      /* This sets background colour for navbar('about-header.ejs') */
+    }
+
+    .navbar {
+      background-color: #000000;
+    }
+
+    .contact--failure-page {
+      width: 100vw;
+      background-color: #7E0FC5;
+    }
+
+    .failure-page {
+      width: 90%;
+      margin: auto;
+      padding: 100px 0;
+      text-align: center;
+      < !-- background-color: #000000;
+      -->
+    }
+
+    .failure-background {
+      background-color: #7E0FC5;
+    }
+
+    .text-1 {
+      font-family: "Fjalla One", sans-serif;
+      font-weight: 800;
+      font-size: 4.3rem;
+      color: #000000;
+    }
+
+    .text {
+      font-family: "Exo 2", sans-serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: #FFFFFF;
+    }
+
+    .contact-button {
+      width: 50%;
+      padding: 15px 0;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+
+    .button-size {
+      width: 180px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    .contact {
+      color: #FFFFFF;
+    }
+
+    .bottom-container {
+      background-color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="contact--failure-page">
+    <div class="container-fluid">
+      <div class="failure-page">
+        <div class="jumbotron jumbotron-fluid text-center failure-background">
+          <div class="container">
+            <h1 class="text-1">Ooops...there's been an error!</h1>
+            <p class="text">Please re-send your message:</p>
+          </div>
+        </div>
+        <div class="contact-button">
+          <a class="btn btn-dark btn-lg button-size" href="/contact"><span class="font-weight-bold align-middle contact">Contact Page</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

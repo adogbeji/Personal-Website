@@ -1,0 +1,123 @@
+<%- include("partials/contact-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:700|Fjalla+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:500&display=swap" rel="stylesheet">
+
+  <style media="all">
+    hr {
+      border-style: none;
+      /* This removes the default <hr> border style(inset) & width(1px) */
+      border-top-style: dashed;
+      border-width: 10px;
+      border-color: #000000;
+      width: 100%;
+      /* The <hr> will inherit styles from the one on home page; its width is relative to its containing div*/
+    }
+
+    .top-container {
+      background-color: #000000;
+      /* This sets background colour for navbar('about-header.ejs') */
+    }
+
+    .navbar {
+      background-color: #000000;
+    }
+
+    .contact--success-page {
+      width: 100vw;
+      background-color: #7E0FC5;
+    }
+
+    .success-page {
+      width: 90%;
+      margin: auto;
+      padding: 100px 0;
+      text-align: center;
+      < !-- background-color: #FF0000;
+      -->
+    }
+
+    .success-background {
+      background-color: #7E0FC5;
+    }
+
+    .text-1 {
+      font-family: 'Fjalla One', sans-serif;
+      font-weight: 800;
+      font-size: 4.3rem;
+      color: #000000;
+    }
+
+    .hr-container {
+      width: 30%;
+      /* This sets the actual visible width of <hr> & makes it dynamic */
+      margin: 8px 0;
+      < !-- background-color: #FF0000;
+      -->
+    }
+
+    .text {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #FFFFFF;
+    }
+
+    .pathway-buttons {
+      width: 90%;
+      padding: 15px 0;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+
+    .button-size {
+      width: 180px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    .pathway {
+      color: #FFFFFF;
+    }
+
+    .bottom-container {
+      background-color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="contact--success-page">
+    <div class="container-fluid">
+      <div class="success-page">
+        <div class="jumbotron jumbotron-fluid text-center success-background">
+          <div class="container">
+            <h1 class="text-1">Message successfully sent!</h1>
+            <div class="hr-container mx-auto">
+              <hr>
+            </div>
+            <p class="text">Please go to the home page or read more:</p>
+          </div>
+        </div>
+        <div class="pathway-buttons">
+          <a class="btn btn-dark btn-lg button-size" href="/"><span class="font-weight-bold align-middle pathway">Home Page</span></a>
+          <a class="btn btn-dark btn-lg button-size" href="/about"><span class="font-weight-bold align-middle pathway">About Page</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>
