@@ -34,18 +34,35 @@
     }
 
     .about-page-title {
-      width: 25%;
+      width: 60%;
       margin: auto;
       text-align: center;
-      < !-- background-color: grey;
-      -->
+      /* background-color: grey; */
+    }
+
+    @media only screen and (min-width: 576px) {
+      .about-page-title {
+        width: 25%;
+        margin: auto;
+        text-align: center;
+        /* background-color: grey; */
+      }
     }
 
     .text-1 {
       font-family: 'Fjalla One', sans-serif;
       font-weight: 600;
-      font-size: 4rem;
+      font-size: 2.8rem;  /* Text size to be used on mobile devices */
       color: #000000;
+    }
+
+    @media only screen and (min-width: 576px) {
+      .text-1 {
+        font-family: 'Fjalla One', sans-serif;
+        font-weight: 600;
+        font-size: 4rem;
+        color: #000000;
+      }
     }
 
     .about-page-contents {
@@ -59,10 +76,21 @@
     .about-page-contents img {
       max-width: 100%;
       height: auto;
-      width: 200px;
+      width: 100px;  /* Width to be rendered on mobile devices */
       float: left;
       margin-right: 10px;
       border-radius: 15px;
+    }
+
+    @media only screen and (min-width: 576px) {
+      .about-page-contents img {
+        max-width: 100%;
+        height: auto;
+        width: 200px;
+        float: left;
+        margin-right: 10px;
+        border-radius: 15px;
+      }
     }
 
     .text-2 {

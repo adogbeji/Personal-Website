@@ -42,8 +42,17 @@
     .text-1 {
       font-family: 'Fjalla One', sans-serif;
       font-weight: 800;
-      font-size: 2.8rem;
+      font-size: 2.5rem;  /* Font size to be used on mobile devices */
       color: #000000;
+    }
+
+    @media only screen and (min-width: 576px) {
+      .text-1 {
+        font-family: 'Fjalla One', sans-serif;
+        font-weight: 800;
+        font-size: 2.8rem;
+        color: #000000;
+      }
     }
 
     .form-background {

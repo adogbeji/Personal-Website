@@ -8,10 +8,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #292121;  /* This colour will be used if the browser cannot render background image */
+  background-color: #292121;
+  /* This colour will be used if the browser cannot render background image */
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {
   body {
     background-image: url("../Images/Img-1a.jpg");
     background-position: center center;
@@ -28,19 +29,21 @@ button span {
 }
 
 hr {
-  border-style: none;  /* This removes the default <hr> border style(inset) & width(1px) */
+  border-style: none;
+  /* This removes the default <hr> border style(inset) & width(1px) */
   border-top-style: dashed;
   border-width: 10px;
   border-color: #00FF00;
-  width: 100%;  /* Width is relative to parent 'hr-container' div */
+  width: 100%;
+  /* Width is relative to parent 'hr-container' div */
 }
 
 /* Navigation Bar */
-
 .top-container {
   width: 100vw;
   height: 25vh;
-  background-color: rgb(0, 0, 0);  /* This colour will be used a a fallback for the one below */
+  background-color: rgb(0, 0, 0);
+  /* This colour will be used a a fallback for the one below */
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -72,13 +75,21 @@ hr {
 }
 
 /* Main Contents */
-
 .middle-container {
   width: 100vw;
-  text-align: center;
   padding-bottom: 80px;
   background-color: transparent;  /* No background colour here */
   /* background-color: #FF0000; */
+}
+
+@media only screen and (min-width: 576px) {
+  .middle-container {
+    width: 100vw;
+    text-align: center;  /* This will center the button in the child 'button-container' div */
+    padding-bottom: 80px;
+    background-color: transparent;  /* No background colour here */
+    /* background-color: #FF0000; */
+  }
 }
 
 .text-container-1 {
@@ -100,7 +111,8 @@ hr {
   width: 60%;
   padding: 3px 0;
   text-align: center;
-  margin-bottom: 6px;  /* Bootstrap 'mx-auto' class is being used for horizontal centering instead!
+  margin-bottom: 6px;
+  /* Bootstrap 'mx-auto' class is being used for horizontal centering instead!
   background-color: transparent;  /* No background colour */
   /* background-color: #FF0000; */
 }
@@ -113,9 +125,11 @@ hr {
 }
 
 .text-container-3 {
-  width: 300px;  /* Specified width for link text button */
+  width: 300px;
+  /* Specified width for link text button */
   margin: auto;
-  background-color: transparent;  /* No background colour */
+  background-color: transparent;
+  /* No background colour */
 }
 
 .text-border {
@@ -143,25 +157,38 @@ hr {
 }
 
 .hr-container {
-  width: 35%;  /* This sets the visible <hr> width and makes it dynamic too */
+  width: 35%;
+  /* This sets the visible <hr> width and makes it dynamic too */
   margin-top: 80px;
 }
 
 .text-container-4 {
   width: 60%;
   padding: 3px 0;
-  margin-top: 60px;  /* Bootstrap 'mx-auto' class is being used for horizontal centering instead! */
+  margin-top: 60px;
+  /* Bootstrap 'mx-auto' class is being used for horizontal centering instead! */
   text-align: center;
-  background-color: transparent;  /* No background colour */
+  background-color: transparent;
+  /* No background colour */
   /* background-color: #FF0000; */
 }
 
 .button-container {
   width: 40%;
-  margin: auto;
   padding: 8px 0;
-  display: inline-block;
+  margin-left: 18%;  /* This keeps the button centered on mobile screens */
+  /* display: inline-block; */
   /* background-color: grey; */
+}
+
+@media only screen and (min-width: 576px) {
+  .button-container {
+    width: 40%;
+    margin: auto;  /* This keeps button horizontally centered on medium & large screens */
+    padding: 8px 0;
+    display: inline-block;
+    /* background-color: grey; */
+  }
 }
 
 .contact {
@@ -175,11 +202,11 @@ hr {
 }
 
 /* Footer */
-
 .bottom-container {
   width: 100vw;
   line-height: 8vh;
-  background-color: transparent;  /* No background colour */
+  background-color: transparent;
+  /* No background colour */
 }
 
 .footer-text {
