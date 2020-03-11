@@ -40,8 +40,8 @@ app.post("/contact", function(req, res) {
   //The 'transporter' connects us to the chosen e-mail service
   const transporter = nodemailer.createTransport({
    host: "smtp-mail.outlook.com",
-   port: 587,
-   secure: false, // true for 465, false for other ports
+   port: 465,
+   secure: true, // true for 465, false for other ports
    auth: {
      user: process.env.EMAIL_ADDRESS, // generated ethereal user
      pass: process.env.EMAIL_PASSWORD // generated ethereal password
