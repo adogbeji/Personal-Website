@@ -24,14 +24,6 @@ app.get("/contact", function(req, res) {
   res.render("contact");
 });
 
-app.get("/failure", function(req, res) {  //This route is for testing only!
-  res.render("contact-failure");
-});
-
-app.get("/success", function(req, res) {  //This route is for testing only!
-  res.render("contact-success");
-});
-
 app.post("/contact", function(req, res) {
   const output = `{
     <h3>You have a new contact request</h3>
