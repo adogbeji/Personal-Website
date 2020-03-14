@@ -42,8 +42,17 @@
     .text-1 {
       font-family: "Fjalla One", sans-serif;
       font-weight: 800;
-      font-size: 4.3rem;
+      font-size: 2.5rem;  /* We must render a smaller font size on mobile devices */
       color: #000000;
+    }
+
+    @media only screen (min-width: 576px) {
+      .text-1 {
+        font-family: "Fjalla One", sans-serif;
+        font-weight: 800;
+        font-size: 4.3rem;
+        color: #000000;
+      }
     }
 
     .text {
@@ -54,10 +63,20 @@
     }
 
     .contact-button {
-      width: 50%;
+      width: 75%;  /* Width here must exceed button width, so we can center button at small screen sizes */
       padding: 15px 0;
       margin-bottom: 40px;
       display: inline-block;
+    }
+
+    @media only screen and (min-width: 576px) {
+      .contact-button {
+        width: 50%;
+        padding: 15px 0;
+        margin-bottom: 40px;
+        display: inline-block;
+        /* background-color: #FF0000; */
+      }
     }
 
     .button-size {

@@ -52,8 +52,17 @@
     .text-1 {
       font-family: 'Fjalla One', sans-serif;
       font-weight: 800;
-      font-size: 4.3rem;
+      font-size: 3rem;
       color: #000000;
+    }
+
+    @media only screen and (min-width: 576px) {
+      .text-1 {
+        font-family: 'Fjalla One', sans-serif;
+        font-weight: 800;
+        font-size: 4.3rem;
+        color: #000000;
+      }
     }
 
     .hr-container {
@@ -76,6 +85,12 @@
       padding: 15px 0;
       margin-bottom: 40px;
       display: inline-block;
+    }
+
+    @media only screen and (max-width: 576px) {
+      a:first-child {
+        margin-bottom: 3px;  /* This creates space between the two buttons */
+      }
     }
 
     .button-size {
