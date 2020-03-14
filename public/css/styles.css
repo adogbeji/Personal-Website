@@ -77,19 +77,10 @@ hr {
 /* Main Contents */
 .middle-container {
   width: 100vw;
+  text-align: center;
   padding-bottom: 80px;
   background-color: transparent;  /* No background colour here */
   /* background-color: #FF0000; */
-}
-
-@media only screen and (min-width: 576px) {
-  .middle-container {
-    width: 100vw;
-    text-align: center;  /* This will center the button in the child 'button-container' div */
-    padding-bottom: 80px;
-    background-color: transparent;  /* No background colour here */
-    /* background-color: #FF0000; */
-  }
 }
 
 .text-container-1 {
@@ -174,17 +165,15 @@ hr {
 }
 
 .button-container {
-  width: 40%;
+  width: 70%;
   padding: 8px 0;
-  margin-left: 18%;  /* This keeps the button centered on mobile screens */
-  /* display: inline-block; */
+  display: inline-block;
   /* background-color: grey; */
 }
 
 @media only screen and (min-width: 576px) {
   .button-container {
     width: 40%;
-    margin: auto;  /* This keeps button horizontally centered on medium & large screens */
     padding: 8px 0;
     display: inline-block;
     /* background-color: grey; */

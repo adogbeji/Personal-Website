@@ -28,7 +28,7 @@ app.get("/failure", function(req, res) {  //This route is for testing only!
   res.render("contact-failure");
 });
 
-app.get("/success", function(req, res) {
+app.get("/success", function(req, res) {  //This route is for testing only!
   res.render("contact-success");
 });
 
