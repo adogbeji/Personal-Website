@@ -180,6 +180,18 @@ hr {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  a span {
+    margin-top: 3px;  /* This keeps Contact button text vertically centered at small screen sizes */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  a span {
+    margin-top: 5px;  /* This keeps Contact button text vertically centered at medium screen sizes */
+  }
+}
+
 .contact {
   width: 180px;
   height: 60px;
