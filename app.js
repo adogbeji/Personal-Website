@@ -40,7 +40,7 @@ app.post("/contact", function(req, res) {
   const transporter = nodemailer.createTransport({
    host: "smtp.live.com",
    port: 587,
-   secure: false, // true for 465, false for other ports
+   secure: true, // true for 465, false for other ports
  });
 
 //What the e-mail will look like
