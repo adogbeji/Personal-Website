@@ -56,16 +56,6 @@ app.post("/contact", function(req, res) {
   .catch(err => {
     res.render("contact-failure");
   });
-
- //Attempt to send the email
-  // transporter.sendMail(mailOptions, (error, response) => {
-  //   if (error) {
-  //     res.render("contact-failure"); // Show a page indicating failure
-  //   }
-  //   else {
-  //     res.render("contact-success"); // Show a page indicating success
-  //   }
-  // });
 });
 
 
