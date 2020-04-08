@@ -37,35 +37,35 @@ app.post("/contact", function(req, res) {
     <p>${req.body.message}</p>
   }`;
 
+  //This sets API key on 'sgMail' object
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  //The 'transporter' connects us to the chosen e-mail service
-  const transporter = nodemailer.createTransport({
-   host: "smtp.live.com",
-   secureConnection: false,
-   port: 587,
-   secure: true, // true for 465, false for other ports
-   tls: {
-     ciphers: "SSLv3"
-   }
- });
+  //What the e-mail will look like
+  const msg = {
+    to: process.env.EMAIL_ADDRESS,
+    from: `${req.body.email}`,
+    subject: "New Client Message",
+    html: output
+  };
 
-//What the e-mail will look like
- const mailOptions = {
-   from: `${req.body.email}`,
-   to: process.env.EMAIL_ADDRESS,
-   subject: "New Client Message",
-   html: output  //You MUST specify the property as 'html', otherwise it won't work!!
- };
+  //We now use 'sgMail' object to send email
+  sgMail.send(msg)
+  .then(() => {
+    res.render("contact-success");
+  })
+  .catch(err => {
+    res.render("contact-failure");
+  });
 
  //Attempt to send the email
-  transporter.sendMail(mailOptions, (error, response) => {
-    if (error) {
-      res.render("contact-failure"); // Show a page indicating failure
-    }
-    else {
-      res.render("contact-success"); // Show a page indicating success
-    }
-  });
+  // transporter.sendMail(mailOptions, (error, response) => {
+  //   if (error) {
+  //     res.render("contact-failure"); // Show a page indicating failure
+  //   }
+  //   else {
+  //     res.render("contact-success"); // Show a page indicating success
+  //   }
+  // });
 });
 
 
