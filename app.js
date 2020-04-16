@@ -1,6 +1,7 @@
 //jshint esversion:6
 
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({path: path.join(__dirname, ".env")});
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
