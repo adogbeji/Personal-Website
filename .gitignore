@@ -1,3 +1,6 @@
+#Folder containing Google Verification Code
+partials
+
 # Logs
 logs
 *.log
