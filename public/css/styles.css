@@ -46,6 +46,7 @@ hr {
   bottom: 10px;
   width: 50px;
   height: 50px;
+  z-index: 99;  /* Prevents overlap */
   border: none;  /* Removes borders */
   outline: none;  /* Removes outline */
   cursor: pointer;
