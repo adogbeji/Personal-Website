@@ -1,6 +1,9 @@
 #Folder containing Google Verification Code
 partials
 
+#File containing Meta Descriptions & Title text
+meta-descriptions.txt
+
 # Logs
 logs
 *.log
