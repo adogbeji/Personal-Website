@@ -25,6 +25,10 @@ app.get("/contact", function(req, res) {
   res.render("contact");
 });
 
+app.get("/sitemap.xml", (req, res) => {
+  res.sendFile(__dirname + "/sitemap.xml");
+});
+
 app.post("/contact", function(req, res) {
   // What the e-mail will look like
   const output = `{
