@@ -1,0 +1,5 @@
+Sitemap: https://benjaminakponasa.org/sitemap.xml
+
+#This allows all Search Engines to crawl ALL pages on the website
+User-agent: *
+Allow: /
