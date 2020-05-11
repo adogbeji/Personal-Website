@@ -4,6 +4,9 @@ partials
 #File containing Meta Descriptions & Title text
 meta-descriptions.txt
 
+#File containing robots.txt file
+robots.txt
+
 #Sitemap File
 sitemap.xml
 
