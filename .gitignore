@@ -1,5 +1,5 @@
-#Folder containing Google Verification Code
-partials
+#File containing Google Verification Code
+header.ejs
 
 #File containing Meta Descriptions & Title text
 meta-descriptions.txt
