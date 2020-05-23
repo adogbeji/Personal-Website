@@ -46,7 +46,7 @@ app.post("/contact", function(req, res) {
     <p>${req.body.message}</p>
   }`;
 
-  //This sets API key on 'sgMail' object
+  // This sets API key on 'sgMail' object
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   //What the e-mail will look like
