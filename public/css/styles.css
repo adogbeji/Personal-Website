@@ -1,10 +1,10 @@
-body {
+body {  /* Targeting small-screen devices */
   margin: 0;
   padding: 0;
   max-width: 100%;
   overflow-x: hidden;
   background-image: url("../Images/Img-1b.jpg");
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -12,7 +12,7 @@ body {
   /* This colour will be used if the browser cannot render background image */
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
   body {
     background-image: url("../Images/Img-1a.jpg");
     background-position: center center;
@@ -71,11 +71,17 @@ hr {
   background-color: transparent;
 }
 
-.navbar-brand {
+.navbar-brand {  /* Targeting small-screen devices */
   font-family: 'Fjalla One', sans-serif;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 2.8rem;
   color: #FFFF00;
+}
+
+@media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+  .navbar-brand {
+    font-size: 3rem;
+  }
 }
 
 .navbar-brand:hover {
@@ -84,7 +90,7 @@ hr {
 
 .nav-link {
   font-family: 'Fjalla One', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.5rem;
   color: #FFFF00;
 }
@@ -110,11 +116,21 @@ hr {
   /* background-color: grey; */
 }
 
-.text-1 {
+.text-1 {  /* Targeting small-screen devices */
   font-family: 'Fjalla One', sans-serif;
-  font-weight: 600;
-  font-size: 3.4rem;
+  font-weight: 500;
+  font-size: 2.6rem;
   color: #FFFFFF;
+}
+
+@media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+  .text-1 {
+    font-size: 3.6rem;
+  }
+}
+
+.animate {
+  display: none;  /* This rule will be overwritten by jQuery when the web page loads */
 }
 
 .text-container-2 {
