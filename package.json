@@ -9,12 +9,10 @@
   "author": "Benjamin Akponasa",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^7.1.1",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "nodemon": "^2.0.4",
-    "path": "^0.12.7"
+    "nodemon": "^2.0.4"
   }
 }

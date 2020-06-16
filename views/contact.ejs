@@ -30,11 +30,17 @@
       background-color: #7E0FC5;
     }
 
-    .form-container {
+    .form-container {  /* Targeting small, medium & large-screen devices */
       width: 85%;
       margin: auto;
       padding: 100px 0 150px 0;
       /* background-color: #FF0000; */
+    }
+
+    @media only screen and (min-width: 1200px) {  /* Targeting X-Large devices */
+      .form-container {
+        padding: 100px 0 260px 0;  /* Bottom padding prevents 'page-jump' on form submission */
+      }
     }
 
     .header-container {
@@ -47,7 +53,7 @@
     .text-1 {
       font-family: 'Fjalla One', sans-serif;
       font-weight: 800;
-      font-size: 2.5rem;  /* Font size to be used on mobile devices */
+      font-size: 2rem;  /* Font size to be used on mobile devices */
       color: #000000;
     }
 
@@ -80,6 +86,22 @@
     .bottom-container {
       background-color: #000000;   /* This sets background colour for footer('footer.ejs') */
     }
+
+    .form-submit--message {  /* Targeting small-screen devices */
+      font-family: 'Fjalla One', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #000000;
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .form-submit--message {
+        font-family: 'Fjalla One', sans-serif;
+        font-weight: 800;
+        font-size: 2rem;
+        color: #000000;
+      }
+    }
   </style>
 </head>
 
@@ -96,7 +118,8 @@
             <div class="col-sm-8">
               <div class="card form-background">
                 <div class="card-body">
-                  <form action="/contact" method="post">
+                  <form class="gform" action="https://script.google.com/macros/s/AKfycbxniAc6jT_OARE-Hrq1h1btC8hVWizt2BbMKjbT/exec" method="post">
+                   <div class="form-elements">
                     <div class="form-group">
                       <label for="clientName"><span class="text-colour font-weight-bold">Your Name:</span></label>
                       <input type="text" name="name" class="form-control" id="clientName" aria-describedby="privacy1" autocomplete="off" placeholder="eg. Paul Smith">
@@ -112,6 +135,10 @@
                       <textarea id="clientMessage" name="message" class="form-control" rows="15" autofocus></textarea>
                     </div>
                     <button type="submit" class="btn button-colour">Submit</button>
+                  </div>
+                  <div class="thankyou_message" style="display: none;">
+                    <h2 class="form-submit--message"><em>Thanks</em> for contacting us! We'll be in touch soon!</h2>
+                  </div>
                   </form>
                 </div>
               </div>
@@ -119,6 +146,7 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
 
 </body>
