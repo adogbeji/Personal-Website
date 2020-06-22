@@ -50,20 +50,20 @@ hr {
   border: none;  /* Removes borders */
   outline: none;  /* Removes outline */
   cursor: pointer;
+  color: #FFFFFF;
+  background-color: #000000;
 }
 
-.button-colour {
-  color: #0000FF;
-  background-color: #FFFFFF;
+.scroll-top:hover {
+  color: #00FF00;
+  background-color: #000000;
 }
 
 /* Navigation Bar */
 .top-container {
   width: 100vw;
   height: 25vh;
-  background-color: rgb(0, 0, 0);
-  /* This colour will be used a a fallback for the one below */
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: transparent;  /* No background colour here */
 }
 
 .navbar {
@@ -85,7 +85,7 @@ hr {
 }
 
 .navbar-brand:hover {
-  color: #0000FF;
+  color: #000000;
 }
 
 .nav-link {
@@ -96,16 +96,22 @@ hr {
 }
 
 .nav-link:hover {
-  color: #0000FF;
+  color: #000000;
 }
 
 /* Main Contents */
-.middle-container {
+.middle-container {  /* Targeting small-screen devices */
   width: 100vw;
   text-align: center;
   padding-bottom: 80px;
   background-color: transparent;  /* No background colour here */
   /* background-color: #FF0000; */
+}
+
+@media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+  .middle-container {
+    padding-bottom: 160px;
+  }
 }
 
 .text-container-1 {
@@ -138,8 +144,7 @@ hr {
   padding: 3px 0;
   text-align: center;
   margin-bottom: 6px;
-  /* Bootstrap 'mx-auto' class is being used for horizontal centering instead!
-  background-color: transparent;  /* No background colour */
+  /* Bootstrap 'mx-auto' class is being used for horizontal centering instead! */
   /* background-color: #FF0000; */
 }
 
@@ -148,6 +153,7 @@ hr {
   font-weight: 600;
   font-size: 1.8rem;
   color: #FFFFFF;
+  line-height: 1;
 }
 
 .text-container-3 {
@@ -213,6 +219,16 @@ hr {
     display: inline-block;
     /* background-color: grey; */
   }
+}
+
+.button-colour {
+  color: #000000;
+  border: 0.5px solid #000000;
+}
+
+.button-colour:hover {
+  color: #FFFFFF;
+  background-color: #000000;
 }
 
 @media only screen and (max-width: 576px) {

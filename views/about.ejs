@@ -11,6 +11,22 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:700|Fjalla+One&display=swap" rel="stylesheet">
 
   <style media="all">
+    .navbar-brand {  /* Setting navbar text colour */
+      color: #FFFFFF;
+    }
+
+    .navbar-brand:hover {
+      color: #0000FF;
+    }
+
+    .nav-link {  /* Setting navbar text colour */
+      color: #FFFFFF;
+    }
+
+    .nav-link:hover {
+      color: #0000FF;
+    }
+
     .top-container {
       background-color: #000000;
       /* This sets background colour for navbar('about-header.ejs') */
@@ -29,39 +45,32 @@
       width: 90%;
       margin: auto;
       padding-top: 60px;
-      < !-- background-color: #FF0000;
-      -->
+      /* background-color: #FF0000; */
     }
 
-    .about-page-title {
+    .about-page-title {  /* Targeting smll-screen devices */
       width: 60%;
       margin: auto;
       text-align: center;
       /* background-color: grey; */
     }
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
       .about-page-title {
         width: 25%;
-        margin: auto;
-        text-align: center;
-        /* background-color: grey; */
       }
     }
 
-    .text-1 {
+    .text-1 {  /* Targeting small-screen devices */
       font-family: 'Fjalla One', sans-serif;
       font-weight: 600;
-      font-size: 2.8rem;  /* Text size to be used on mobile devices */
+      font-size: 2.8rem;
       color: #000000;
     }
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
       .text-1 {
-        font-family: 'Fjalla One', sans-serif;
-        font-weight: 600;
         font-size: 4rem;
-        color: #000000;
       }
     }
 
@@ -69,27 +78,21 @@
       width: 80%;
       margin-top: 60px;
       padding-bottom: 50px;
-      < !-- background-color: yellow;
-      -->
+      /* background-color: yellow; */
     }
 
-    .about-page-contents img {
+    .about-page-contents img {  /* Targeting small-screen devices */
       max-width: 100%;
       height: auto;
-      width: 100px;  /* Width to be rendered on mobile devices */
+      width: 100px;
       float: left;
       margin-right: 10px;
       border-radius: 15px;
     }
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
       .about-page-contents img {
-        max-width: 100%;
-        height: auto;
         width: 200px;
-        float: left;
-        margin-right: 10px;
-        border-radius: 15px;
       }
     }
 
@@ -98,26 +101,32 @@
       font-weight: 600;
       font-size: 1.2rem;
       color: #FFFFFF;
+      line-height: 1.5;
     }
 
     .paragraph-1 {
-      margin-top: 70px;
-      < !-- background-color: yellow;
-      -->
+      width: 100%;
+      /* background-color: yellow; */
     }
 
     .paragraph-2 {
+      width: 100%;
       margin-top: 70px;
-      < !-- background-color: yellow;
-      -->
+      /* background-color: yellow; */
     }
 
-    @media only screen and (min-width: 600px) {
-      .paragraph-1 {
+    .paragraph-3 {
+      width: 100%;
+      margin-top: 70px;
+      /* background-color: yellow; */
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .paragraph-2 {
         margin-top: 0;
       }
 
-      .paragraph-2 {
+      .paragraph-3 {
         margin-top: 0;
       }
     }
@@ -133,6 +142,10 @@
     .bottom-container {
       background-color: #000000;
     }
+
+    .footer-text {  /* Setting footer text colour */
+      color: #FFFFFF;
+    }
   </style>
 </head>
 
@@ -146,21 +159,23 @@
         </div>
         <div class="about-page-contents mx-auto">
           <img src="Images/Img-2.jpg" alt="A picture of Benjamin Akponasa wearing sunglasses">
-          <p class="text-2">Hi everyone, I’m Ben!! Firstly, I just want to say a HUGE thank you for visiting my personal website. I have dedicated this page to tell you a little bit about myself and what I do. I’m a Full Stack Developer based here in
-            the UK. I grew up with my wonderful family and parents in the beautiful city of…Oxford! Growing up, I have always had an inclination towards Classics and the Sciences. I’ve also had many interesting career aspirations along the way. I’ll
-            let you in on a few of them.
-            <div class="paragraph-1">
-              <p class="text-2">When I was really young, my ambition was to become an airline pilot. Then at some point, I dreamt of becoming a pro athlete. Towards the end of my time at school, I seriously considered studying Medicine, but then
-                ended up doing a BSc in Biochemistry instead. 3 unforgettable years as an undergraduate student went by fast, trust me.
-                After my degree, I initially considered becoming a qualified Secondary Science Teacher. However, it turned out not to be my destiny. One thing led to another, and I eventually developed a keen interest in software and programming.
-                Something, I would never ever have imagined myself doing. I found myself engrossed in learning to code and building out websites/apps. This has finally led me to where I am today.</p>
-            </div>
-            <div class="paragraph-2">
-              <p class="text-2">Want to know my hobbies? Well, in my free time, I like to exercise, cook and play music. Listening to/playing music is such a great way to chill out. Boogie Woogie piano has actually been my main focus lately, and I
-                want to become really good at it one day! There’s nothing more awesome than being able to get on the keys and make people dance!
-                To that end, the material on this website is all my own work with no affiliation to anyone else. So, best of luck and stay strong in all your endeavours! If you’d like to get in touch for anything, please don’t hesitate. Just go to
-                the <a class="contact text-decoration-none" href="/contact">'Contact'</a> page at the top of my website and send me a message. See you on the other side!</p>
-            </div>
+          <div class="paragraph-1">
+            <p class="text-2">Hi everyone, I’m Ben!! Firstly, I just want to say a HUGE thank you for visiting my personal website. I have dedicated this page to tell you a little bit about myself and what I do. I’m a Full Stack Developer based here
+              in the UK. I grew up with my wonderful family and parents in the beautiful city of…Oxford! Growing up, I have always had an inclination towards Classics and the Sciences. I’ve also had many interesting career aspirations along the way.
+              I’ll let you in on a few of them.</p>
+          </div>
+          <div class="paragraph-2">
+            <p class="text-2">When I was really young, my ambition was to become an airline pilot. Then at some point, I dreamt of becoming a pro athlete. Towards the end of my time at school, I seriously considered studying Medicine, but then
+              ended up doing a BSc in Biochemistry instead. 3 unforgettable years as an undergraduate student went by fast, trust me.
+              After my degree, I initially considered becoming a qualified Secondary Science Teacher. However, it turned out not to be my destiny. One thing led to another, and I eventually developed a keen interest in software and programming.
+              Something, I would never ever have imagined myself doing. I found myself engrossed in learning to code and building out websites/apps. This has finally led me to where I am today.</p>
+          </div>
+          <div class="paragraph-3">
+            <p class="text-2">Want to know my hobbies? Well, in my free time, I like to exercise, cook and play music. Listening to/playing music is such a great way to chill out. Boogie Woogie piano has actually been my main focus lately, and I
+              want to become really good at it one day! There’s nothing more awesome than being able to get on the keys and make people dance!
+              To that end, the material on this website is all my own work with no affiliation to anyone else. So, best of luck and stay strong in all your endeavours! If you’d like to get in touch for anything, please don’t hesitate. Just go to
+              the <a class="contact text-decoration-none" href="/contact">Contact</a> page at the top of my website and send me a message. See you on the other side!</p>
+          </div>
         </div>
       </div>
     </div>
