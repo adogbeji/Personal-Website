@@ -88,6 +88,30 @@ hr {
   font-size: 28px;
 }
 
+@media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+  .navbar-brand {
+    transform: translateY(15px);
+  }
+
+  .navbar-toggler {  /* Positioning hamburger icon */
+    transform: translate(-7px, 12px);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+  .navbar-brand {
+    transform: translateY(45px);
+  }
+
+  .navbar-toggler {  /* Positioning hamburger icon */
+    transform: translate(-3px, 40px);
+  }
+
+  .navbar-collapse {  /* Creates space between hamburger icon & dropdown text */
+    margin-top: 35px;
+  }
+}
+
 .nav-link {
   font-family: 'Fjalla One', sans-serif;
   font-weight: 400;
