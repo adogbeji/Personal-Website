@@ -23,11 +23,6 @@ body {  /* Targeting small-screen devices */
   }
 }
 
-button span {
-  color: #FFFF00;
-  font-size: 28px;
-}
-
 hr {
   border-style: none;
   /* This removes the default <hr> border style(inset) & width(1px) */
@@ -86,6 +81,11 @@ hr {
 
 .navbar-brand:hover {
   color: #000000;
+}
+
+.hamburger-icon {
+  color: #FFFF00;
+  font-size: 28px;
 }
 
 .nav-link {

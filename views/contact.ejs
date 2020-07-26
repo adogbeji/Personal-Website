@@ -19,6 +19,22 @@
       color: #0000FF;
     }
 
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .navbar-brand {
+        transform: translateY(15px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .navbar-brand {
+        transform: translateY(45px);
+      }
+
+      .hamburger-icon {
+        transform: translateY(45px);
+      }
+    }
+
     .nav-link {  /* Setting navbar text colour */
       color: #FFFFFF;
     }
@@ -98,6 +114,10 @@
       background-color: #000000;   /* This sets background colour for footer('footer.ejs') */
     }
 
+    .thankyou_message {
+      text-align: center;
+    }
+
     .form-submit--message {  /* Targeting small-screen devices */
       font-family: 'Fjalla One', sans-serif;
       font-weight: 800;
@@ -133,7 +153,7 @@
             <div class="col-sm-8">
               <div class="card form-background">
                 <div class="card-body">
-                  <form class="gform" action="https://script.google.com/macros/s/AKfycbxniAc6jT_OARE-Hrq1h1btC8hVWizt2BbMKjbT/exec" method="post">
+                  <form class="gform" action="https://script.google.com/macros/s/AKfycbyi2D2aqyHztBp2MoxsuvxNkk700vzGfKhSJEOJ/exec" method="post">
                    <div class="form-elements">
                     <div class="form-group">
                       <label for="clientName"><span class="text-colour font-weight-bold">Your Name:</span></label>
