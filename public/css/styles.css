@@ -39,8 +39,8 @@ hr {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   z-index: 99;  /* Prevents overlap */
   border: none;  /* Removes borders */
   outline: none;  /* Removes outline */
@@ -57,19 +57,20 @@ hr {
 /* Navigation Bar */
 .top-container {
   width: 100vw;
-  height: 25vh;
-  background-color: transparent;  /* No background colour here */
+  /*background-color: transparent;  /* No background colour here */
+  /* background-color: #000000; */
 }
 
 .navbar {
-  padding: 3% 5%;
-  background-color: transparent;
+  padding: 1% 5%;
+  /* background-color: transparent; */
+  /* background-color: #000000; */
 }
 
 .navbar-brand {  /* Targeting small-screen devices */
   font-family: 'Fjalla One', sans-serif;
   font-weight: 500;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   color: #FFFF00;
 }
 
@@ -86,40 +87,6 @@ hr {
 .hamburger-icon {
   color: #FFFF00;
   font-size: 28px;
-}
-
-@media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
-  .navbar-brand {
-    transform: translateY(15px);
-  }
-
-  .navbar-toggler {  /* Positioning hamburger icon */
-    transform: translate(-7px, 12px);
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
-  .navbar-brand {
-    transform: translateY(45px);
-  }
-
-  .navbar-toggler {  /* Positioning hamburger icon */
-    transform: translate(-3px, 40px);
-  }
-
-  .navbar-collapse {  /* Creates space between hamburger icon & dropdown text */
-    margin-top: 35px;
-  }
-}
-
-@media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
-  .navbar-brand {
-    transform: translateY(30px);
-  }
-
-  .navbar-collapse {  /* Positioning Navbar Menu Links */
-    transform: translateY(35px);
-  }
 }
 
 .nav-link {

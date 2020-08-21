@@ -30,7 +30,7 @@ app.get("/robots.txt", (req, res) => {
   res.sendFile(__dirname + "/robots.txt");
 });
 
-//NB: No Contact POST route - emails are being send via Google Sheets!
+//NB: No Contact POST route - emails are being sent via Google Sheets!
 
 const port = process.env.PORT;
 
