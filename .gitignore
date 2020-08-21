@@ -10,6 +10,9 @@ robots.txt
 #Sitemap File
 sitemap.xml
 
+#File containing Environment Variables (All files with '.env' extension)
+*.env
+
 # Logs
 logs
 *.log

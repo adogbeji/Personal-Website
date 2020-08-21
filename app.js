@@ -1,16 +1,14 @@
 //jshint esversion:6
 
-require("dotenv").config();
+require("dotenv").config({path: "./config.env"});
 const express = require("express");
-const bodyParser = require("body-parser");
 const ejs = require("ejs");
 
 const app = express();
 app.set("view engine", "ejs");
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
-
 
 app.get("/", function(req, res) {
   res.render("home");
@@ -34,7 +32,8 @@ app.get("/robots.txt", (req, res) => {
 
 //NB: No Contact POST route - emails are being send via Google Sheets!
 
+const port = process.env.PORT;
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log("Listening on port 3000...");
 });
