@@ -10,6 +10,8 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+//For Next Time: Start building 'Learn More' button on Homepage!
+
 app.get("/", function(req, res) {
   res.render("home");
 });

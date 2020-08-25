@@ -58,25 +58,35 @@ hr {
 .top-container {
   width: 100vw;
   /*background-color: transparent;  /* No background colour here */
-  /* background-color: #000000; */
 }
 
 .navbar {
   padding: 1% 5%;
   /* background-color: transparent; */
-  /* background-color: #000000; */
 }
 
 .navbar-brand {  /* Targeting small-screen devices */
-  font-family: 'Fjalla One', sans-serif;
-  font-weight: 500;
-  font-size: 2.6rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
   color: #FFFF00;
+}
+
+@media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+  .navbar-brand {
+    transform: translateY(-2px);
+  }
 }
 
 @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
   .navbar-brand {
     font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+  .navbar-brand {
+    transform: translateY(-3px);
   }
 }
 
@@ -89,11 +99,41 @@ hr {
   font-size: 28px;
 }
 
+@media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+  .hamburger-icon {
+    transform: translateX(-5px);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+  .hamburger-icon {
+    transform: translateX(5px);
+  }
+}
+
+@media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+  .navbar-nav {
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+  .navbar-nav {
+    margin-top: 3px;
+  }
+}
+
 .nav-link {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
   color: #FFFF00;
+}
+
+@media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+  .nav-link {
+    font-size: 1.3rem;
+  }
 }
 
 .nav-link:hover {
@@ -124,7 +164,7 @@ hr {
 }
 
 .text-1 {  /* Targeting small-screen devices */
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 2.6rem;
   color: #FFFFFF;
@@ -136,57 +176,34 @@ hr {
   }
 }
 
+.highlight {
+  text-decoration: solid underline #0000FF;
+}
+
 .animate {
   display: none;  /* This rule will be overwritten by jQuery when the web page loads */
 }
 
 .text-container-2 {
   width: 60%;
+  margin: auto;
   padding: 3px 0;
   text-align: center;
-  margin-bottom: 6px;
-  /* Bootstrap 'mx-auto' class is being used for horizontal centering instead! */
-  /* background-color: #FF0000; */
+  background-color: #FF0000;
 }
 
-.text-2 {
-  font-family: 'Dosis', sans-serif;
-  font-weight: 600;
-  font-size: 1.8rem;
+.text-2 {  /* Targeting small-screen devices & others */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;  /* Small-screen */
   color: #FFFFFF;
   line-height: 1;
 }
 
-.text-container-3 {
-  width: 300px;
-  /* Specified width for link text button */
-  margin: auto;
-  background-color: transparent;
-  /* No background colour */
-}
-
-.text-border {
-  border-radius: 5px;
-  border: 3.5px solid #FFFF00;
-}
-
-.text-box {
-  width: 60%;
-  margin: auto;
-  padding: 10px 0 5px 0;
-  text-align: center;
-  /* background-color: grey; */
-}
-
-.text-3 {
-  font-family: 'Dosis', sans-serif;
-  font-weight: 600;
-  font-size: 1.6rem;
-  color: #FFFFFF;
-}
-
-.text-3:hover {
-  color: #FF0000;
+@media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+  .text-2 {
+    font-size: 1.8rem;
+  }
 }
 
 .hr-container {

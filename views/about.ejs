@@ -8,7 +8,7 @@
   <title></title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Dosis:700|Fjalla+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
   <style media="all">
     .navbar-brand {  /* Setting navbar text colour */
@@ -17,41 +17,6 @@
 
     .navbar-brand:hover {
       color: #0000FF;
-    }
-
-
-    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
-      .navbar-brand {
-        transform: translateY(15px);
-      }
-
-      .navbar-toggler {  /* Positioning hamburger icon */
-         transform: translate(-7px, 12px);
-       }
-     }
-
-     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
-        .navbar-brand {
-          transform: translateY(45px);
-        }
-
-        .navbar-toggler {  /* Positioning hamburger icon */
-          transform: translate(-3px, 40px);
-        }
-
-        .navbar-collapse {  /* Creates space between hamburger icon & dropdown text */
-          margin-top: 35px;
-        }
-    }
-
-    @media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
-      .navbar-brand {
-        transform: translateY(30px);
-      }
-
-      .navbar-collapse {  /* Positioning Navbar Menu Links */
-        transform: translateY(35px);
-      }
     }
 
     .nav-link {  /* Setting navbar text colour */
@@ -79,13 +44,13 @@
     .about-page-container {
       width: 90%;
       margin: auto;
-      padding-top: 60px;
       /* background-color: #FF0000; */
     }
 
-    .about-page-title {  /* Targeting smll-screen devices */
+    .about-page-title {  /* Targeting small-screen devices & others */
       width: 60%;
       margin: auto;
+      padding-top: 60px;
       text-align: center;
       /* background-color: grey; */
     }
@@ -96,10 +61,16 @@
       }
     }
 
+    @media only screen and (min-width: 1300px) {  /* Targeting X-large devices */
+      .about-page-title {
+        padding-top: 120px;
+      }
+    }
+
     .text-1 {  /* Targeting small-screen devices */
-      font-family: 'Fjalla One', sans-serif;
-      font-weight: 600;
-      font-size: 2.8rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 3.2rem;  /* Small-screen */
       color: #000000;
     }
 
@@ -114,6 +85,12 @@
       margin-top: 60px;
       padding-bottom: 50px;
       /* background-color: yellow; */
+    }
+
+    @media only screen and (min-width: 1300px) {  /* Targeting X-large devices */
+      .about-page-contents {
+        padding-bottom: 115px;
+      }
     }
 
     .about-page-contents img {  /* Targeting small-screen devices */
@@ -132,11 +109,10 @@
     }
 
     .text-2 {
-      font-family: 'Dosis', sans-serif;
-      font-weight: 600;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
       font-size: 1.2rem;
       color: #FFFFFF;
-      line-height: 1.5;
     }
 
     .paragraph-1 {
@@ -167,11 +143,13 @@
     }
 
     .contact {
+      font-weight: 500;
       color: #000000;
     }
 
     .contact:hover {
-      color: #FF0000;
+      color: #FFFFFF;
+      background-color: #000000;
     }
 
     .bottom-container {
