@@ -143,7 +143,7 @@ hr {
 /* Main Contents */
 .middle-container {  /* Targeting small-screen devices */
   width: 100vw;
-  text-align: center;
+  text-align: center;  /* Horizontally centres button divs */
   padding-bottom: 80px;
   background-color: transparent;  /* No background colour here */
   /* background-color: #FF0000; */
@@ -166,8 +166,14 @@ hr {
 .text-1 {  /* Targeting small-screen devices */
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 2.6rem;
+  font-size: 2.6rem;  /* Small-screen */
   color: #FFFFFF;
+}
+
+@media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+  .text-1 {
+    transform: translateX(-5px);
+  }
 }
 
 @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
@@ -189,7 +195,7 @@ hr {
   margin: auto;
   padding: 3px 0;
   text-align: center;
-  background-color: #FF0000;
+  /* background-color: #FF0000; */
 }
 
 .text-2 {  /* Targeting small-screen devices & others */
@@ -206,42 +212,15 @@ hr {
   }
 }
 
-.hr-container {
-  width: 35%;
-  /* This sets the visible <hr> width and makes it dynamic too */
-  margin-top: 80px;
-}
-
-.text-container-4 {
-  width: 60%;
-  padding: 3px 0;
-  margin-top: 60px;
-  /* Bootstrap 'mx-auto' class is being used for horizontal centering instead! */
-  text-align: center;
-  background-color: transparent;
-  /* No background colour */
-  /* background-color: #FF0000; */
-}
-
-.button-container {
-  width: 70%;
+.button-container--1 {
+  width: 50%;
   padding: 8px 0;
   display: inline-block;
-  /* background-color: grey; */
-}
-
-@media only screen and (min-width: 576px) {
-  .button-container {
-    width: 40%;
-    padding: 8px 0;
-    display: inline-block;
-    /* background-color: grey; */
-  }
 }
 
 .button-colour {
   color: #000000;
-  border: 0.5px solid #000000;
+  border: 1px solid #000000;
 }
 
 .button-colour:hover {
@@ -249,26 +228,30 @@ hr {
   background-color: #000000;
 }
 
-@media only screen and (max-width: 576px) {
-  a span {
-    margin-top: 3px;  /* This keeps Contact button text vertically centered at small screen sizes */
-  }
+.button-size {
+  transform: scale(1.2);
 }
 
-@media only screen and (max-width: 768px) {
-  a span {
-    margin-top: 5px;  /* This keeps Contact button text vertically centered at medium screen sizes */
-  }
+.hr-container {
+  width: 35%;
+  /* This sets the visible <hr> width and makes it dynamic too */
+  margin-top: 80px;
 }
 
-.contact {
-  width: 180px;
-  height: 60px;
-  border-radius: 5px;
+.text-container-3 {
+  width: 60%;
+  margin: auto;
+  padding: 60px 0 3px 0;
+  text-align: center;
+  background-color: transparent;
+  /* No background colour */
+  /* background-color: #FF0000; */
 }
 
-.contact:hover {
-  color: #FFFFFF;
+.button-container--2 {
+  width: 50%;
+  padding: 8px 0;
+  display: inline-block;
 }
 
 /* Footer */
