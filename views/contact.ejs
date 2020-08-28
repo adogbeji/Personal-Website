@@ -48,9 +48,15 @@
       /* background-color: #FF0000; */
     }
 
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .form-container {
+        padding: 150px 0 280px 0;  /* Bottom padding prevents 'page-jump' on form submission */
+      }
+    }
+
     @media only screen and (min-width: 1200px) {  /* Targeting X-Large devices */
       .form-container {
-        padding: 100px 0 260px 0;  /* Bottom padding prevents 'page-jump' on form submission */
+        padding: 150px 0 310px 0;  /* Bottom padding prevents 'page-jump' on form submission */
       }
     }
 
@@ -156,7 +162,7 @@
             <div class="col-sm-8">
               <div class="card form-background">
                 <div class="card-body">
-                  <form class="gform" action="https://script.google.com/macros/s/AKfycbyi2D2aqyHztBp2MoxsuvxNkk700vzGfKhSJEOJ/exec" method="post">
+                  <form class="gform" action="https://script.google.com/macros/s/AKfycbz8kyvuKqJEHVJL9u0AO0ongEhY7ufuD6q8rCsNnQ/exec" method="post">
                    <div class="form-elements">
                     <div class="form-group">
                       <label for="clientName"><span class="text-colour font-weight-bold">Your Name:</span></label>

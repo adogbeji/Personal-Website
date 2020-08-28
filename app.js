@@ -10,8 +10,6 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-// For Next Time: Adjust 'form-container' class on Contact Page to prevent gaps appearing during form submission
-
 app.get("/", function(req, res) {
   res.render("home");
 });
