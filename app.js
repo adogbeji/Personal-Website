@@ -10,15 +10,16 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-app.get("/", function(req, res) {
+
+app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/about", function(req, res) {
+app.get("/about", (req, res) => {
   res.render("about");
 });
 
-app.get("/contact", function(req, res) {
+app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
@@ -30,7 +31,11 @@ app.get("/robots.txt", (req, res) => {
   res.sendFile(__dirname + "/robots.txt");
 });
 
-//NB: No Contact POST route - emails are being sent via Google Sheets!
+app.get("/failure", (req, res) => {  // Test Route
+  res.render("contact-failure");
+});
+
+// No Contact Post Route - Emails are being sent through Google Sheets!
 
 const port = process.env.PORT;
 

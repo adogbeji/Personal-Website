@@ -66,8 +66,8 @@ hr {
 }
 
 .navbar-brand {  /* Targeting small-screen devices */
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   font-size: 2.4rem;
   color: #FFFF00;
 }
@@ -124,7 +124,7 @@ hr {
 }
 
 .nav-link {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
   color: #FFFF00;
