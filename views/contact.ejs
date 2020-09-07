@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
   <style media="all">
-    .navbar-brand {  /* Setting navbar text colour */
+    .navbar-brand {
+      /* Setting navbar text colour */
       color: #FFFFFF;
     }
 
@@ -23,7 +24,8 @@
       color: #FFFFFF;
     }
 
-    .nav-link {  /* Setting navbar text colour */
+    .nav-link {
+      /* Setting navbar text colour */
       color: #FFFFFF;
     }
 
@@ -45,48 +47,131 @@
       background-color: #7E0FC5;
     }
 
-    .form-container {  /* Targeting small, medium & large-screen devices */
-      width: 85%;
+    .text-container {
+      /* Targeting small-screen devices & others */
+      width: 90%;
       margin: auto;
-      padding: 100px 0 150px 0;
+      padding-top: 130px;
+      /* Small-screen */
+      text-align: center;
       /* background-color: #FF0000; */
     }
 
-    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
-      .form-container {
-        padding: 150px 0 280px 0;  /* Bottom padding prevents 'page-jump' on form submission */
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+
+      /* Targeting medium-screen devices */
+      .text-container {
+        padding-top: 280px;
       }
     }
 
-    @media only screen and (min-width: 1200px) {  /* Targeting X-Large devices */
-      .form-container {
-        padding: 150px 0 310px 0;  /* Bottom padding prevents 'page-jump' on form submission */
+    @media only screen and (min-width: 992px) and (max-width: 1400px) {
+
+      /* Targeting large-screen devices */
+      .text-container {
+        padding-top: 220px;
       }
     }
 
-    .header-container {
+    @media only screen and (min-width: 1400px) {
+
+      /* Targeting X-large devices */
+      .text-container {
+        padding-top: 300px;
+      }
+    }
+
+    .text-1 { /* Targeting small-screen devices & others */
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 2rem; /* Small-screen */
+      color: #000000;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-3px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 2.8rem;
+      }
+    }
+
+    .button-container {
       width: 90%;
       margin: auto;
       text-align: center;
-      padding-bottom: 80px;
-      /* background-color: grey; */
+      padding: 15px 0 260px 0;
     }
 
-    .text-1 {  /* Targeting small-screen devices & others */
+    @media only screen and (max-width: 600px) {
+
+      /* Targeting small-screen devices */
+      .button-container {
+        padding-bottom: 170px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+
+      /* Targeting medium-screen devices */
+      .button-container {
+        padding-bottom: 370px;
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {
+
+      /* Targeting X-large devices */
+      .button-container {
+        padding-bottom: 350px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      /* Targeting small-screen devices */
+      .button-container button {
+        transform: translateX(-5px);
+      }
+    }
+
+    .button-colour--1 {
+      color: #FFFFFF;
+      background-color: #292121;
+    }
+
+    .button-colour--1:hover {
+      color: #FFFFFF;
+      background-color: #292121;
+    }
+
+    .button-size {
+      transform: scale(1.2);
+    }
+
+    /* Modal Box */
+
+    .modal-content {
+      background-color: #EEEEEE;
+    }
+
+    .modal-title {  /* Targeting small-sceren devices & others */
       font-family: 'Roboto', sans-serif;
       font-weight: 500;
       font-size: 2rem;  /* Small-screen */
       color: #000000;
     }
 
-    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
-      .text-1 {
-        transform: translateX(-3px);
-      }
-    }
-
     @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
-      .text-1 {
+      .modal-title {
         font-size: 2.8rem;
       }
     }
@@ -95,14 +180,8 @@
       border-radius: 0;
     }
 
-    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
-      .card {
-        transform: translateX(-5px);
-      }
-    }
-
     .form-background {
-      background-color: #FFFFFF;
+      background-color: #111111;
     }
 
     .form-group input {
@@ -110,28 +189,72 @@
     }
 
     .text-colour {
-      color: #000000;
+      color: #FFFF00;
     }
 
     .form-group textarea {
       border-radius: 0;
     }
 
-    .button-colour {
+    .thankyou_message {
+      text-align: center;
+    }
+
+    .form-submit--message { /* Targeting small-screen devices & others */
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 2rem; /* Small-screen */
+      color: #FFFF00;
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .form-submit--message {
+        font-size: 2.8rem;
+      }
+    }
+
+    .button-colour--2 {
+      color: #000000;
+      border-radius: 0;
+      background-color: #00b7c2;
+    }
+
+    .button-colour--2:hover {
+      color: #000000;
+      background-color: #00b7c2;
+    }
+
+    .button-colour--3 {
       color: #FFFFFF;
       border-radius: 0;
       background-color: #000000;
     }
 
-    .button-colour:hover {
-      color: #FFFF00;
+    .button-colour--3:hover {
+      color: #FFFFFF;
+      background-color: #000000;
     }
+
+    .button-colour--4 {
+      color: #FFFFFF;
+      border-radius: 0;
+      background-color: #393B44;
+    }
+
+    .button-colour--4:hover {
+      color: #FFFFFF;
+      background-color: #393B44;
+    }
+
+    /* Footer */
 
     .bottom-container {
-      background-color: #000000;   /* This sets background colour for footer('footer.ejs') */
+      background-color: #000000;
+      /* This sets background colour for footer('footer.ejs') */
     }
 
-    .footer-text {  /* Setting footer text colour */
+    .footer-text {
+      /* Setting footer text colour */
       color: #FFFFFF;
     }
   </style>
@@ -141,38 +264,61 @@
 
   <section class="contact-page">
     <div class="container-fluid">
-      <div class="form-container">
-        <div class="header-container">
-          <h3 class="text-1">Want to shoot me a message? Fill out the form below with your details:</h3>
-        </div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-sm-8">
-              <div class="card form-background">
-                <div class="card-body">
-                  <form class="gform" action="https://script.google.com/macros/s/AKfycbz8kyvuKqJEHVJL9u0AO0ongEhY7ufuD6q8rCsNnQ/exec" method="post">
-                   <div class="form-elements">
-                    <div class="form-group">
-                      <label for="clientName"><span class="text-colour font-weight-bold">Your Name:</span></label>
-                      <input type="text" name="name" class="form-control" id="clientName" aria-describedby="privacy1" autocomplete="off" placeholder="eg. Paul Smith">
-                      <small id="privacy1" class="form-text text-colour">Your name will <span class="font-italic font-weight-bold">never</span> be shared with anyone else.</small>
+      <div class="text-container">
+        <h3 class="text-1">Hit the button below to shoot me a message!</h3>
+      </div>
+      <div class="button-container">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn button-colour--1 font-weight-bold button-size btn-lg" data-toggle="modal" data-target="#contact-page-modal">
+          Contact
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="contact-page-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Personal Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card form-background">
+                        <div class="card-body">
+                          <form class="gform" action="https://script.google.com/macros/s/AKfycbz8kyvuKqJEHVJL9u0AO0ongEhY7ufuD6q8rCsNnQ/exec" method="post">
+                            <div class="form-elements">
+                              <div class="form-group text-left">
+                                <label for="clientName"><span class="text-colour font-weight-bold">Your Name:</span></label>
+                                <input type="text" name="name" class="form-control" id="clientName" aria-describedby="privacy1" autocomplete="off" placeholder="eg. Paul Smith">
+                                <small id="privacy1" class="form-text text-colour">Your name will <span class="font-italic font-weight-bold">never</span> be shared with anyone else.</small>
+                              </div>
+                              <div class="form-group text-left">
+                                <label for="clientEmail"><span class="text-colour font-weight-bold">Your Email:</span></label>
+                                <input type="email" name="email" class="form-control" id="clientEmail" aria-describedby="privacy2" autocomplete="off" placeholder="eg. tommy@email.com">
+                                <small id="privacy2" class="form-text text-colour">Your email will <span class="font-italic font-weight-bold">never</span> be shared with anyone else.</small>
+                              </div>
+                              <div class="form-group text-left">
+                                <label for="clientMessage"><span class="text-colour font-weight-bold">Your Message:</span></label>
+                                <textarea id="clientMessage" name="message" class="form-control" rows="15" autofocus></textarea>
+                              </div>
+                              <button type="submit" class="btn button-colour--2 btn-block">Submit</button>
+                            </div>
+                            <div class="thankyou_message" style="display: none;">
+                              <h2 class="form-submit--message"><strong><em>Thanks</em></strong> for contacting me! I'll be in touch soon!</h2>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </div>
-                    <div class="form-group">
-                      <label for="clientEmail"><span class="text-colour font-weight-bold">Your Email:</span></label>
-                      <input type="email" name="email" class="form-control" id="clientEmail" aria-describedby="privacy2" autocomplete="off" placeholder="eg. tommy@email.com">
-                      <small id="privacy2" class="form-text text-colour">Your email will <span class="font-italic font-weight-bold">never</span> be shared with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="clientMessage"><span class="text-colour font-weight-bold">Your Message:</span></label>
-                      <textarea id="clientMessage" name="message" class="form-control" rows="15" autofocus></textarea>
-                    </div>
-                    <button type="submit" class="btn button-colour btn-block">Submit</button>
                   </div>
-                  <div class="thankyou_message" style="display: none;">
-                    <h2 class="form-submit--message"><strong><em>Thanks</em></strong> for contacting me! I'll be in touch soon!</h2>
-                  </div>
-                  </form>
                 </div>
+              </div>
+              <div class="modal-footer">
+                <a href="/" class="btn button-colour--3 btn-block">Go Back</a> <!-- Sends User to Home Page -->
               </div>
             </div>
           </div>
@@ -180,6 +326,7 @@
       </div>
     </div>
   </section>
+
 
 </body>
 
