@@ -13,6 +13,9 @@ sitemap.xml
 #File containing Environment Variables (All files with '.env' extension)
 *.env
 
+#Folder containing backup files
+backup-files
+
 # Logs
 logs
 *.log
