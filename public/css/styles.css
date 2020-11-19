@@ -3,6 +3,7 @@ body {  /* Targeting small-screen devices & others */
   padding: 0;
   max-width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;  /* Ensures that page always covers the entire viewport */
   background-image: linear-gradient(60deg, rgba(5, 5, 5, 0.6), rgba(41, 33, 33, 0.6)), url("../Images/Img-1b.jpg");
   background-position: center top;
   background-repeat: no-repeat;
@@ -15,14 +16,6 @@ body {  /* Targeting small-screen devices & others */
   body {
     background-image: linear-gradient(60deg, rgba(5, 5, 5, 0.6), rgba(41, 33, 33, 0.6)), url("../Images/Img-1a.jpg");
   }
-}
-
-hr {
-  border-style: none;  /* This removes the default <hr> border style(inset) & width(1px) */
-  border-top-style: dashed;
-  border-width: 10px;
-  border-color: #00FF00;
-  width: 100%;  /* Width is relative to parent 'hr-container' div */
 }
 
 /* Scroll Button */
@@ -189,7 +182,7 @@ hr {
 
 @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
   .text-1 {
-    font-size: 4.1rem;
+    font-size: 4.15rem;
   }
 }
 
@@ -244,18 +237,23 @@ hr {
 }
 
 .hr-container {
-  width: 35%;
-  /* This sets the visible <hr> width and makes it dynamic too */
+  width: 35%;  /* This sets the visible <hr> width and makes it dynamic too */
   margin-top: 80px;
+}
+
+.hr-container hr {
+  border-style: none;  /* This removes the default <hr> border style(inset) & width(1px) */
+  border-top-style: dashed;
+  border-width: 10px;
+  border-color: #00FF00;
+  width: 100%;  /* Width is relative to parent 'hr-container' div */
 }
 
 .text-container-3 {
   width: 60%;
   margin: auto;
-  padding: 60px 0 3px 0;
   text-align: center;
-  background-color: transparent;
-  /* No background colour */
+  padding: 60px 0 3px 0;
   /* background-color: #FF0000; */
 }
 
@@ -266,13 +264,16 @@ hr {
 }
 
 /* Footer */
+
 .bottom-container {
   width: 100vw;
   line-height: 8vh;
-  background-color: transparent;
   /* No background colour */
 }
 
 .footer-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
   color: #FFFF00;
 }
