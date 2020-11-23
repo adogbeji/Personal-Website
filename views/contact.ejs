@@ -11,31 +11,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
   <style media="all">
-    .navbar-brand {
-      /* Setting navbar text colour */
+    .navbar-brand {  /* Setting navbar text colour */
       color: #FFFFFF;
     }
 
     .navbar-brand:hover {
-      color: #0000FF;
+      color: #FFFF00;
     }
 
     .hamburger-icon {
       color: #FFFFFF;
     }
 
-    .nav-link {
-      /* Setting navbar text colour */
+    .nav-link {  /* Setting navbar text colour */
       color: #FFFFFF;
     }
 
     .nav-link:hover {
-      color: #0000FF;
+      color: #FFFF00;
     }
 
-    .top-container {
+    .top-container {  /* This sets background colour for navbar('about-header.ejs') */
       background-color: #000000;
-      /* This sets background colour for navbar('about-header.ejs') */
     }
 
     .navbar {
@@ -47,35 +44,27 @@
       background-color: #7E0FC5;
     }
 
-    .text-container {
-      /* Targeting small-screen devices & others */
+    .text-container {  /* Targeting small-screen devices & others */
       width: 90%;
       margin: auto;
-      padding-top: 130px;
-      /* Small-screen */
+      padding-top: 130px;  /* Small-screen */
       text-align: center;
       /* background-color: #FF0000; */
     }
 
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-
-      /* Targeting medium-screen devices */
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
       .text-container {
         padding-top: 280px;
       }
     }
 
-    @media only screen and (min-width: 992px) and (max-width: 1400px) {
-
-      /* Targeting large-screen devices */
+    @media only screen and (min-width: 992px) and (max-width: 1400px) {  /* Targeting large-screen devices */
       .text-container {
         padding-top: 220px;
       }
     }
 
-    @media only screen and (min-width: 1400px) {
-
-      /* Targeting X-large devices */
+    @media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
       .text-container {
         padding-top: 300px;
       }
@@ -88,17 +77,13 @@
       color: #000000;
     }
 
-    @media only screen and (max-width: 600px) {
-
-      /* Targeting small-screen devices */
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
       .text-1 {
         transform: translateX(-3px);
       }
     }
 
-    @media only screen and (min-width: 768px) {
-
-      /* Targeting medium-screen devices and up */
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
       .text-1 {
         font-size: 2.8rem;
       }
@@ -111,33 +96,25 @@
       padding: 15px 0 260px 0;
     }
 
-    @media only screen and (max-width: 600px) {
-
-      /* Targeting small-screen devices */
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
       .button-container {
         padding-bottom: 170px;
       }
     }
 
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-
-      /* Targeting medium-screen devices */
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
       .button-container {
         padding-bottom: 370px;
       }
     }
 
-    @media only screen and (min-width: 1400px) {
-
-      /* Targeting X-large devices */
+    @media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
       .button-container {
         padding-bottom: 350px;
       }
     }
 
-    @media only screen and (max-width: 600px) {
-
-      /* Targeting small-screen devices */
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
       .button-container button {
         transform: translateX(-5px);
       }
@@ -188,8 +165,28 @@
       border-radius: 0;
     }
 
-    .text-colour {
+    .text-colour--1 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
       color: #FFFF00;
+    }
+
+    .text-colour--2 {  /* Targeting small-screen devices & others */
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;  /* Small-screen */
+      color: #FFFFFF;
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-colour--2 {
+        font-size: 0.9rem;
+      }
+    }
+
+    .text-colour--3 {
+      color: #00FF00;
     }
 
     .form-group textarea {
@@ -283,7 +280,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body px-0">
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col">
@@ -292,17 +289,17 @@
                           <form class="gform" action="https://script.google.com/macros/s/AKfycbz8kyvuKqJEHVJL9u0AO0ongEhY7ufuD6q8rCsNnQ/exec" method="post">
                             <div class="form-elements">
                               <div class="form-group text-left">
-                                <label for="clientName"><span class="text-colour font-weight-bold">Your Name:</span></label>
+                                <label for="clientName"><span class="text-colour--1 font-weight-bold">Name:</span></label>
                                 <input type="text" name="name" class="form-control" id="clientName" aria-describedby="privacy1" autocomplete="off" placeholder="eg. Paul Smith">
-                                <small id="privacy1" class="form-text text-colour">Your name will <span class="font-italic font-weight-bold">never</span> be shared with anyone else.</small>
+                                <small id="privacy1" class="form-text text-colour--2">Your name will <span class="text-colour--3 font-italic font-weight-bold">never</span> be shared with anyone else.</small>
                               </div>
                               <div class="form-group text-left">
-                                <label for="clientEmail"><span class="text-colour font-weight-bold">Your Email:</span></label>
+                                <label for="clientEmail"><span class="text-colour--1 font-weight-bold">Email:</span></label>
                                 <input type="email" name="email" class="form-control" id="clientEmail" aria-describedby="privacy2" autocomplete="off" placeholder="eg. tommy@email.com">
-                                <small id="privacy2" class="form-text text-colour">Your email will <span class="font-italic font-weight-bold">never</span> be shared with anyone else.</small>
+                                <small id="privacy2" class="form-text text-colour--2">Your email will <span class="text-colour--3 font-italic font-weight-bold">never</span> be shared with anyone else.</small>
                               </div>
                               <div class="form-group text-left">
-                                <label for="clientMessage"><span class="text-colour font-weight-bold">Your Message:</span></label>
+                                <label for="clientMessage"><span class="text-colour--1 font-weight-bold">Message:</span></label>
                                 <textarea id="clientMessage" name="message" class="form-control" rows="15" autofocus></textarea>
                               </div>
                               <button type="submit" class="btn button-colour--2 btn-block">Submit</button>

@@ -1,3 +1,7 @@
+html {
+  min-height: 100%;  /* Makes web page at least as high as the browser viewport */
+}
+
 body {  /* Targeting small-screen devices & others */
   margin: 0;
   padding: 0;
