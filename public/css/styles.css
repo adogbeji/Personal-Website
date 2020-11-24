@@ -144,7 +144,7 @@ body {  /* Targeting small-screen devices & others */
   }
 }
 
-.text-container-1 {  /* Targeting small-screen devices and others */
+.home-page-text-container-1 {  /* Targeting small-screen devices and others */
   width: 90%;
   margin: auto;
   text-align: center;
@@ -153,19 +153,18 @@ body {  /* Targeting small-screen devices & others */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
-  .text-container-1 {
-    /* padding: 120px 0 100px 0; */
+  .home-page-text-container-1 {
     padding: 120px 0;
   }
 }
 
 @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
-  .text-container-1 {
+  .home-page-text-container-1 {
     padding: 120px 0 155px 0;
   }
 }
 
-.text-1 {  /* Targeting small-screen devices & others */
+.home-page-text-1 {  /* Targeting small-screen devices & others */
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 2.6rem;  /* Small-screen */
@@ -173,32 +172,32 @@ body {  /* Targeting small-screen devices & others */
 }
 
 @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
-  .text-1 {
+  .home-page-text-1 {
     transform: translateX(-5px);
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
-  .text-1 {
+  .home-page-text-1 {
     font-size: 3.8rem;
   }
 }
 
 @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
-  .text-1 {
+  .home-page-text-1 {
     font-size: 4.15rem;
   }
 }
 
-.highlight {
-  text-decoration: solid underline #0000FF;
-}
-
-.animate {
+.home-page-animate {
   display: none;  /* This rule will be overwritten by jQuery when the web page loads */
 }
 
-.text-container-2 {
+.home-page-highlight {
+  text-decoration: solid underline #0000FF;
+}
+
+.home-page-text-container-2{
   width: 60%;
   margin: auto;
   padding: 3px 0;
@@ -206,7 +205,7 @@ body {  /* Targeting small-screen devices & others */
   /* background-color: #FF0000; */
 }
 
-.text-2 {  /* Targeting small-screen devices & others */
+.home-page-text-2 {  /* Targeting small-screen devices & others */
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.5rem;  /* Small-screen */
@@ -215,28 +214,28 @@ body {  /* Targeting small-screen devices & others */
 }
 
 @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
-  .text-2 {
+  .home-page-text-2 {
     font-size: 1.8rem;
   }
 }
 
-.button-container--1 {
+.home-page-button-container--1 {
   width: 50%;
   padding: 8px 0;
   display: inline-block;
 }
 
-.button-colour {
+.home-page-button-colour {
   color: #000000;
   border: 1px solid #000000;
 }
 
-.button-colour:hover {
+.home-page-button-colour:hover {
   color: #FFFFFF;
   background-color: #000000;
 }
 
-.button-size {
+.home-page-button-size {
   transform: scale(1.2);
 }
 
@@ -253,7 +252,7 @@ body {  /* Targeting small-screen devices & others */
   width: 100%;  /* Width is relative to parent 'hr-container' div */
 }
 
-.text-container-3 {
+.home-page-text-container-3 {
   width: 60%;
   margin: auto;
   text-align: center;
@@ -261,7 +260,7 @@ body {  /* Targeting small-screen devices & others */
   /* background-color: #FF0000; */
 }
 
-.button-container--2 {
+.home-page-button-container--2 {
   width: 50%;
   padding: 8px 0;
   display: inline-block;
