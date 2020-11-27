@@ -39,6 +39,6 @@ app.get("/failure", (req, res) => {  // Test Route
 
 const port = process.env.PORT;
 
-app.listen(port, function() {
+app.listen(port, () => {
   console.log("Listening on port 3000...");
 });

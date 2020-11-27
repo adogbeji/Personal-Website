@@ -16,7 +16,11 @@
     }
 
     .navbar-brand:hover {
-      color: #0000FF;
+      color: #FFFF00;
+    }
+
+    .hamburger-icon {
+      color: #FFFFFF;
     }
 
     .nav-link {  /* Setting navbar text colour */
@@ -24,7 +28,7 @@
     }
 
     .nav-link:hover {
-      color: #0000FF;
+      color: #FFFF00;
     }
 
     .top-container {
@@ -93,16 +97,22 @@
       }
     }
 
-    .about-page-contents img {  /* Targeting small-screen devices */
+    .about-page-contents img {  /* Targeting small-screen devices & others */
       max-width: 100%;
       height: auto;
-      width: 100px;
+      width: 100px;  /* Small-screen */
       float: left;
       margin-right: 10px;
       border-radius: 15px;
     }
 
-    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices  */
+      .about-page-contents img {
+        width: 185px;
+      }
+    }
+
+    @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
       .about-page-contents img {
         width: 200px;
       }
